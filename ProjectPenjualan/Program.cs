@@ -159,6 +159,7 @@ namespace ProjectPenjualan
             // menyimpan input yang dimasukkan user ke variable total yang bertipe data double
             double total = Convert.ToDouble(Console.ReadLine());
 
+            // Menambahkan element List
             daftarPenjualan.Add(new Penjualan() { Nota = nota, Tanggal = tanggal, Costumer = costumer, Jenis = jenis, Total = total });
 
             // Menampilkan sebuah string dengan pindah baris
@@ -185,10 +186,14 @@ namespace ProjectPenjualan
 
             // deklarasi variable x dengan tipe data integer yang mempunyai value 0
             int x = 0;
+
+            // Mengakses semua element daftarPenjualan menggunakan foreach
             foreach (Penjualan penjualan in daftarPenjualan)
             {
+                // Cek apakah hapus sama dengan objek penjualan
                 if (hapus == penjualan.Nota)
                 {
+                    // Menghapus list pada index x
                     daftarPenjualan.RemoveAt(x);
 
                     // Menampilkan sebuah string dengan pindah baris
@@ -224,6 +229,8 @@ namespace ProjectPenjualan
 
             // Deklarasi variable no dengan tipe data Integer yang mempunyai value 1
             int no = 1;
+
+            // Mengakses semua element daftarPenjualan menggunakan foreach
             foreach (Penjualan penjualan in daftarPenjualan)
             {
 
